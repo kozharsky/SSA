@@ -1,0 +1,45 @@
+{
+    "Parameters": {
+        "KeyPair": {
+            "Description": "~/keys/kozharsky.pem",
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "KInstance": {
+            "Properties": {
+                "ImageId": "ami-8504fdea",
+                "InstanceType": "t2.micro",
+                "KeyName": {
+                    "Ref": "KeyPair"
+                },
+                "SecurityGroups": [
+                    {
+                        "Ref": "MySecurityGroup"
+                    }
+                ]
+            },
+            "Type": "AWS::EC2::Instance"
+        },
+        "MySecurityGroup": {
+            "Properties": {
+                "GroupDescription": "Allow access to MyInstance",
+                "SecurityGroupIngress": [
+                    {
+                        "CidrIp": "0.0.0.0/0",
+                        "FromPort": "22",
+                        "IpProtocol": "tcp",
+                        "ToPort": "22"
+                    },
+                    {
+                        "CidrIp": "0.0.0.0/0",
+                        "FromPort": "80",
+                        "IpProtocol": "tcp",
+                        "ToPort": "80"
+                    }
+                ]
+            },
+            "Type": "AWS::EC2::SecurityGroup"
+        }
+    }
+}
