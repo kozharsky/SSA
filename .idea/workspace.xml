@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9050e4d8-89de-48dd-a26f-c9d153f2aff6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res.json" afterPath="$PROJECT_DIR$/res.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ssa.py" afterPath="$PROJECT_DIR$/ssa.py" />
     </list>
     <ignored path="SSA.iws" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="ssa.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ssa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="265">
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding>
                 <element signature="e#20#90#0" expanded="true" />
               </folding>
@@ -389,8 +388,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ssa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="265">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
             <element signature="e#20#90#0" expanded="true" />
           </folding>

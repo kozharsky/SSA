@@ -38,6 +38,14 @@ instance.SecurityGroups = [Ref(sg)]
 instance.KeyName = Ref(keypair)
 
 # Add output to template
+
+template.add_output(Output(
+    'PublicIp',
+    Description='Public IP of the newly created EC2 instance',
+    Value=GetAtt(instance, 'PublicIp')
+))
+
+
 #template.add_output(Output(
 #    "InstanceAccess",
 #    Description="Command to use to SSH to instance",

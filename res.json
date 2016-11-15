@@ -1,4 +1,15 @@
 {
+    "Outputs": {
+        "PublicIp": {
+            "Description": "Public IP of the newly created EC2 instance",
+            "Value": {
+                "Fn::GetAtt": [
+                    "KInstance",
+                    "PublicIp"
+                ]
+            }
+        }
+    },
     "Parameters": {
         "KeyPair": {
             "Description": "~/keys/kozharsky.pem",
