@@ -15,13 +15,13 @@
                 },
                 "SecurityGroups": [
                     {
-                        "Ref": "MySecurityGroup"
+                        "Ref": "awscli"
                     }
                 ]
             },
             "Type": "AWS::EC2::Instance"
         },
-        "MySecurityGroup": {
+        "awscli": {
             "Properties": {
                 "GroupDescription": "Allow access to MyInstance",
                 "SecurityGroupIngress": [

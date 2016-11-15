@@ -13,7 +13,7 @@ keypair = template.add_parameter(Parameter(
 ))
 
 # Create a security group
-sg = ec2.SecurityGroup('MySecurityGroup')
+sg = ec2.SecurityGroup('awscli')
 sg.GroupDescription = "Allow access to MyInstance"
 sg.SecurityGroupIngress = [
     ec2.SecurityGroupRule(
@@ -36,6 +36,13 @@ instance.ImageId = "ami-8504fdea"
 instance.InstanceType = "t2.micro"
 instance.SecurityGroups = [Ref(sg)]
 instance.KeyName = Ref(keypair)
+
+# Add output to template
+#template.add_output(Output(
+#    "InstanceAccess",
+#    Description="Command to use to SSH to instance",
+#    Value=Join("", ["ssh -i ", Ref(keypair), " ubuntu@", GetAtt(instance, "PublicDnsName")])
+#))
 
 # Add instance to template
 template.add_resource(instance)
